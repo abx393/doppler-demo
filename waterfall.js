@@ -76,7 +76,8 @@ var Waterfall = (function(options){
     // the range is the carrier frequency +- 500 Hz
     lowi = Math.round(frequencies.length / 22000 * (carrier_freq - 500));
     highi = Math.round(frequencies.length / 22000 * (carrier_freq + 500));
-
+    
+    
     for(var i = lowi; i < highi; i++) {
       var mag = frequencies[i];
 
@@ -86,7 +87,7 @@ var Waterfall = (function(options){
       console.log("AFTER " + mag);
 
       // canvasContext.fillStyle = "rgba(0,"+mag+",0,1)";
-      canvasContext.fillStyle = '#'+heatmap[mag];
+      canvasContext.fillStyle = 'rgb('+mag+"," +mag+","+mag+")";
 
       // x = i - lowi;
       x = Math.round((i - lowi) * width / (highi - lowi));
