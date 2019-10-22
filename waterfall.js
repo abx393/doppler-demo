@@ -81,10 +81,10 @@ var Waterfall = (function(options){
     for(var i = lowi; i < highi; i++) {
       var mag = frequencies[i];
 
-      //console.log("BEFORE " + mag);
+      console.log("BEFORE " + mag);
       // mag = Math.min(255, mag + 5);
       mag = Math.floor(Math.pow(mag/255, 0.3)*255);
-      //console.log("AFTER " + mag);
+      console.log("AFTER " + mag);
 
       // canvasContext.fillStyle = "rgba(0,"+mag+",0,1)";
       canvasContext.fillStyle = 'rgb('+mag+"," +mag+","+mag+")";
