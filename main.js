@@ -1,5 +1,5 @@
 
-carrier_freq = 5000;
+carrier_freq = 10000;
 
 
 (function(window, document, undefined) {
