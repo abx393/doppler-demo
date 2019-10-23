@@ -74,8 +74,8 @@ var Waterfall = (function(options){
     canvasContext.drawImage(canvasContext.canvas, 0, 0, width, height - moveBy, 0, moveBy, width, height - moveBy);
     console.log("FREQUENCIES LENGTH " + frequencies.length);
     // the range is the carrier frequency +- 500 Hz
-    lowi = Math.round(frequencies.length / 48000 * (carrier_freq - 500));
-    highi = Math.round(frequencies.length / 48000 * (carrier_freq + 500));
+    lowi = Math.round(frequencies.length / 24000 * (carrier_freq - 500));
+    highi = Math.round(frequencies.length / 24000 * (carrier_freq + 500));
     
     
     for(var i = lowi; i < highi; i++) {
