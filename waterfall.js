@@ -74,17 +74,17 @@ var Waterfall = (function(options){
     canvasContext.drawImage(canvasContext.canvas, 0, 0, width, height - moveBy, 0, moveBy, width, height - moveBy);
 
     // the range is the carrier frequency +- 500 Hz
-    lowi = Math.round(frequencies.length / 22000 * (carrier_freq - 500));
-    highi = Math.round(frequencies.length / 22000 * (carrier_freq + 500));
+    lowi = Math.round(frequencies.length / 48000 * (carrier_freq - 500));
+    highi = Math.round(frequencies.length / 48000 * (carrier_freq + 500));
     
     
     for(var i = lowi; i < highi; i++) {
       var mag = frequencies[i];
 
-      console.log(i + " BEFORE " + mag);
+      //console.log(i + " BEFORE " + mag);
       // mag = Math.min(255, mag + 5);
       mag = Math.floor(Math.pow(mag/255, 0.3)*255);
-      console.log(i + " AFTER " + mag);
+      //console.log(i + " AFTER " + mag);
 
       // canvasContext.fillStyle = "rgba(0,"+mag+",0,1)";
       canvasContext.fillStyle = 'rgb('+mag+"," +mag+","+mag+")";
