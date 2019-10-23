@@ -72,7 +72,7 @@ var Waterfall = (function(options){
     frequencies = new Uint8Array(analyser.frequencyBinCount);
     analyser.getByteFrequencyData(frequencies);
     canvasContext.drawImage(canvasContext.canvas, 0, 0, width, height - moveBy, 0, moveBy, width, height - moveBy);
-    console.log("FREQUENCIES LENGTH " + frequencies.length);
+    //console.log("FREQUENCIES LENGTH " + frequencies.length);
     // the range is the carrier frequency +- 500 Hz
     lowi = Math.round(frequencies.length / 24000 * (carrier_freq - 50));
     highi = Math.round(frequencies.length / 24000 * (carrier_freq + 50));
