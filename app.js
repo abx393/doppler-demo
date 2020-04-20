@@ -1,5 +1,6 @@
 var dir = "./data/";
-var fname = "test.wav";
+var faudio = "";
+var fnotes = "";
 
 //webkitURL is deprecated but nevertheless
 URL = window.URL || window.webkitURL;
